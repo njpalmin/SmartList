@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@+id/wrapper" android:layout_width="fill_parent" android:layout_height="@dimen/list_item_height_large" android:minHeight="@dimen/list_item_height_large"
+      xmlns:android="http://schemas.android.com/apk/res/android" android:layout_marginLeft="5dip">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/line2" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="0.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/note" android:visibility="gone" 
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/coupon" android:visibility="gone" 
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" />
+            <TextView android:textSize="@dimen/list_subitem_font_medium" android:textColor="#ff666666" 
+                        android:ellipsize="marquee" android:id="@+id/quantity" android:visibility="visible" 
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                        android:text="@android:id/text2" android:singleLine="true"
+                        xmlns:android="http://schemas.android.com/apk/res/android" />
+        </LinearLayout>
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ff000000" android:ellipsize="marquee" 
+                    android:gravity="center_vertical" android:id="@+id/description" android:visibility="visible" 
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" 
+                    android:text="android:id/text1" android:singleLine="true" android:layout_above="@id/line2" 
+                    android:layout_alignParentLeft="true" android:layout_alignParentTop="true" 
+                    android:layout_alignWithParentIfMissing="true"
+                    xmlns:android="http://schemas.android.com/apk/res/android" />
+        <ImageView android:id="@+id/text1_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" 
+                    android:src="@drawable/ic_dragger" android:layout_alignParentTop="true" 
+                    android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>
+

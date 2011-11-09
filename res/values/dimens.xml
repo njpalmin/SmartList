@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_item_height_large">64.0dip</dimen>
+    <dimen name="list_item_height_medium">48.0dip</dimen>
+    <dimen name="list_item_height_small">40.0dip</dimen>
+    <dimen name="list_item_font_large">22.0sp</dimen>
+    <dimen name="list_item_font_medium">18.0sp</dimen>
+    <dimen name="list_item_font_small">14.0sp</dimen>
+    <dimen name="list_subitem_font_medium">14.0sp</dimen>
+    <dimen name="list_subitem_font_small">10.0sp</dimen>
+    <dimen name="widget_list_item_height_medium">44.0dip</dimen>
+    <dimen name="widget_list_item_font_medium">16.0sp</dimen>
+    <dimen name="quickaction_shadow_horiz">0.0dip</dimen>
+    <dimen name="quickaction_shadow_vert">33.0dip</dimen>
+    <dimen name="quickaction_shadow_touch">20.0dip</dimen>
+</resources>

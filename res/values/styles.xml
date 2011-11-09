@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.ListView.Base" parent="@android:style/Widget.ListView" />
+    <style name="Theme.Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@style/ThemeDialogTitle</item>
+    </style>
+    <style name="Theme.Dialog.NoTitleBar" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Dialog.NoBackground" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@null</item>
+    </style>
+    <style name="ThemeDialogTitle" parent="@android:style/TextAppearance.DialogWindowTitle">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="Theme.Transparent" parent="@android:style/Theme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="Theme.Light" parent="@android:style/Theme.Light">
+        <item name="android:textColorPrimaryInverse">@android:color/primary_text_light</item>
+    </style>
+    <style name="Theme.Light.NoTitleBar" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:textColorPrimaryInverse">@android:color/primary_text_light</item>
+    </style>
+    <style name="Theme.Light.NoTitleBar.NoBackground" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:textColorPrimaryInverse">@android:color/primary_text_light</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+    <style name="Theme.ThemedListActivity.Default" parent="@android:style/Theme">
+        <item name="headerBackground">@drawable/bg_header</item>
+        <item name="headerPaddingLeft">0.0dip</item>
+        <item name="headerPaddingTop">0.0dip</item>
+        <item name="headerPaddingRight">0.0dip</item>
+        <item name="headerPaddingBottom">0.0dip</item>
+        <item name="headerTitleBarPaddingLeft">8.0dip</item>
+        <item name="headerTitleBarPaddingTop">0.0dip</item>
+        <item name="headerTitleBarPaddingRight">8.0dip</item>
+        <item name="headerTitleBarPaddingBottom">4.0dip</item>
+        <item name="headerInputTextBarPaddingLeft">0.0dip</item>
+        <item name="headerInputTextBarPaddingTop">0.0dip</item>
+        <item name="headerInputTextBarPaddingRight">0.0dip</item>
+        <item name="headerInputTextBarPaddingBottom">0.0dip</item>
+        <item name="headerScanButtonBackground">@drawable/btn_scan</item>
+        <item name="headerAddButtonBackground">@drawable/btn_add</item>
+        <item name="headerTextBackground">@drawable/bg_header_title</item>
+        <item name="headerTextColor">#ffffffff</item>
+        <item name="headerTextStyle">bold</item>
+        <item name="headerTextSize">20.0sp</item>
+        <item name="headerTextShadowColor">#ff000000</item>
+        <item name="headerTextShadowDx">0.0</item>
+        <item name="headerTextShadowDy">-1.0</item>
+        <item name="headerTextShadowRadius">1.0</item>
+        <item name="listBackground">@drawable/bg_list</item>
+        <item name="listPaddingLeft">0.0dip</item>
+        <item name="listPaddingTop">10.0dip</item>
+        <item name="listPaddingRight">0.0dip</item>
+        <item name="listPaddingBottom">0.0dip</item>
+        <item name="listDivider">#ffc6d6cb</item>
+        <item name="listDividerHeight">1.0px</item>
+        <item name="listItemLine1TextColor">#ff000000</item>
+        <item name="listItemLine2TextColor">#ff666666</item>
+        <item name="listItemPaddingLeft">16.0dip</item>
+        <item name="listItemPaddingTop">0.0dip</item>
+        <item name="listItemPaddingRight">10.0dip</item>
+        <item name="listItemPaddingBottom">0.0dip</item>
+        <item name="footerBackground">@drawable/bg_footer</item>
+        <item name="footerPaddingLeft">0.0dip</item>
+        <item name="footerPaddingTop">19.0dip</item>
+        <item name="footerPaddingRight">0.0dip</item>
+        <item name="footerPaddingBottom">0.0dip</item>
+        <item name="footerTextColor">#fff0f0f0</item>
+        <item name="footerTextStyle">bold</item>
+        <item name="footerButtonBackground">@drawable/bg_button</item>
+        <item name="footerButtonHeight">41.0dip</item>
+        <item name="footerTextSize">18.0sp</item>
+        <item name="footerTextShadowColor">#ff000000</item>
+        <item name="footerTextShadowDx">1.0</item>
+        <item name="footerTextShadowDy">1.0</item>
+        <item name="footerTextShadowRadius">1.0</item>
+    </style>
+    <style name="Theme.ThemedListActivity.WhiteNotepad" parent="@style/Theme.ThemedListActivity.Default">
+        <item name="headerBackground">@drawable/bg_header_whitenotepad</item>
+        <item name="headerPaddingLeft">14.0dip</item>
+        <item name="headerPaddingTop">14.0dip</item>
+        <item name="headerPaddingRight">14.0dip</item>
+        <item name="headerPaddingBottom">0.0dip</item>
+        <item name="headerTitleBarPaddingLeft">0.0dip</item>
+        <item name="headerTitleBarPaddingTop">0.0dip</item>
+        <item name="headerTitleBarPaddingRight">0.0dip</item>
+        <item name="headerTitleBarPaddingBottom">0.0dip</item>
+        <item name="headerInputTextBarPaddingLeft">0.0dip</item>
+        <item name="headerInputTextBarPaddingTop">1.0dip</item>
+        <item name="headerInputTextBarPaddingRight">0.0dip</item>
+        <item name="headerInputTextBarPaddingBottom">0.0dip</item>
+        <item name="headerScanButtonBackground">@drawable/btn_scan_whitenotepad</item>
+        <item name="headerAddButtonBackground">@drawable/btn_add_whitenotepad</item>
+        <item name="headerTextBackground">@android:color/transparent</item>
+        <item name="headerTextColor">#ff484848</item>
+        <item name="headerTextStyle">bold</item>
+        <item name="headerTextSize">20.0sp</item>
+        <item name="headerTextShadowColor">#ffffffff</item>
+        <item name="headerTextShadowDx">0.0</item>
+        <item name="headerTextShadowDy">-1.0</item>
+        <item name="headerTextShadowRadius">1.0</item>
+        <item name="listBackground">@drawable/bg_list_whitenotepad</item>
+        <item name="listPaddingLeft">15.0dip</item>
+        <item name="listPaddingTop">0.0dip</item>
+        <item name="listPaddingRight">15.0dip</item>
+        <item name="listPaddingBottom">0.0dip</item>
+        <item name="listDivider">@drawable/bg_divider_whitenotepad</item>
+        <item name="listDividerHeight">2.0px</item>
+        <item name="listItemLine1TextColor">#ff000000</item>
+        <item name="listItemLine2TextColor">#ff666666</item>
+        <item name="listItemPaddingLeft">0.0dip</item>
+        <item name="listItemPaddingTop">0.0dip</item>
+        <item name="listItemPaddingRight">0.0dip</item>
+        <item name="listItemPaddingBottom">0.0dip</item>
+        <item name="footerBackground">@drawable/bg_footer_whitenotepad</item>
+        <item name="footerPaddingLeft">0.0dip</item>
+        <item name="footerPaddingTop">19.0dip</item>
+        <item name="footerPaddingRight">0.0dip</item>
+        <item name="footerPaddingBottom">0.0dip</item>
+        <item name="footerTextColor">#fff0f0f0</item>
+        <item name="footerTextStyle">bold</item>
+        <item name="footerButtonBackground">@drawable/bg_button_whitenotepad</item>
+        <item name="footerButtonHeight">41.0dip</item>
+        <item name="footerTextSize">18.0sp</item>
+        <item name="footerTextShadowColor">#ff000000</item>
+        <item name="footerTextShadowDx">1.0</item>
+        <item name="footerTextShadowDy">1.0</item>
+        <item name="footerTextShadowRadius">1.0</item>
+    </style>
+    <style name="Theme.ThemedListActivity.BlueRibbon" parent="@style/Theme.ThemedListActivity.Default">
+        <item name="headerBackground">@drawable/bg_header_blueribbon</item>
+        <item name="headerPaddingLeft">0.0dip</item>
+        <item name="headerPaddingTop">0.0dip</item>
+        <item name="headerPaddingRight">0.0dip</item>
+        <item name="headerPaddingBottom">0.0dip</item>
+        <item name="headerTitleBarPaddingLeft">8.0dip</item>
+        <item name="headerTitleBarPaddingTop">0.0dip</item>
+        <item name="headerTitleBarPaddingRight">8.0dip</item>
+        <item name="headerTitleBarPaddingBottom">6.0dip</item>
+        <item name="headerInputTextBarPaddingLeft">0.0dip</item>
+        <item name="headerInputTextBarPaddingTop">0.0dip</item>
+        <item name="headerInputTextBarPaddingRight">0.0dip</item>
+        <item name="headerInputTextBarPaddingBottom">4.0dip</item>
+        <item name="headerScanButtonBackground">@drawable/btn_scan_blueribbon</item>
+        <item name="headerAddButtonBackground">@drawable/btn_add_blueribbon</item>
+        <item name="headerTextBackground">@android:color/transparent</item>
+        <item name="headerTextColor">#ffffffff</item>
+        <item name="headerTextStyle">bold</item>
+        <item name="headerTextSize">20.0sp</item>
+        <item name="headerTextShadowColor">#ff484848</item>
+        <item name="headerTextShadowDx">1.0</item>
+        <item name="headerTextShadowDy">1.0</item>
+        <item name="headerTextShadowRadius">1.0</item>
+        <item name="listBackground">@drawable/bg_list_blueribbon</item>
+        <item name="listPaddingLeft">0.0dip</item>
+        <item name="listPaddingTop">2.0dip</item>
+        <item name="listPaddingRight">0.0dip</item>
+        <item name="listPaddingBottom">0.0dip</item>
+        <item name="listDivider">#ffbddbfe</item>
+        <item name="listDividerHeight">1.0px</item>
+        <item name="listItemLine1TextColor">#ff000000</item>
+        <item name="listItemLine2TextColor">#ff666666</item>
+        <item name="listItemPaddingLeft">16.0dip</item>
+        <item name="listItemPaddingTop">0.0dip</item>
+        <item name="listItemPaddingRight">5.0dip</item>
+        <item name="listItemPaddingBottom">0.0dip</item>
+        <item name="footerBackground">@drawable/bg_footer_blueribbon</item>
+        <item name="footerPaddingLeft">0.0dip</item>
+        <item name="footerPaddingTop">27.0dip</item>
+        <item name="footerPaddingRight">0.0dip</item>
+        <item name="footerPaddingBottom">0.0dip</item>
+        <item name="footerTextColor">#ff333333</item>
+        <item name="footerTextStyle">bold</item>
+        <item name="footerButtonBackground">@drawable/bg_button_blueribbon</item>
+        <item name="footerButtonHeight">38.0dip</item>
+        <item name="footerTextSize">18.0sp</item>
+        <item name="footerTextShadowColor">#ffffffff</item>
+        <item name="footerTextShadowDx">1.0</item>
+        <item name="footerTextShadowDy">1.0</item>
+        <item name="footerTextShadowRadius">1.0</item>
+    </style>
+    <style name="Theme.ThemedListActivity.BlackSlate" parent="@style/Theme.ThemedListActivity.Default">
+        <item name="headerBackground">@drawable/bg_header_blackslate</item>
+        <item name="headerPaddingLeft">14.0dip</item>
+        <item name="headerPaddingTop">8.0dip</item>
+        <item name="headerPaddingRight">14.0dip</item>
+        <item name="headerPaddingBottom">0.0dip</item>
+        <item name="headerTitleBarPaddingLeft">0.0dip</item>
+        <item name="headerTitleBarPaddingTop">0.0dip</item>
+        <item name="headerTitleBarPaddingRight">0.0dip</item>
+        <item name="headerTitleBarPaddingBottom">0.0dip</item>
+        <item name="headerInputTextBarPaddingLeft">0.0dip</item>
+        <item name="headerInputTextBarPaddingTop">0.0dip</item>
+        <item name="headerInputTextBarPaddingRight">0.0dip</item>
+        <item name="headerInputTextBarPaddingBottom">0.0dip</item>
+        <item name="headerScanButtonBackground">@drawable/btn_scan_blackslate</item>
+        <item name="headerAddButtonBackground">@drawable/btn_add_blackslate</item>
+        <item name="headerTextBackground">@android:color/transparent</item>
+        <item name="headerTextColor">#ffffffff</item>
+        <item name="headerTextStyle">bold</item>
+        <item name="headerTextSize">20.0sp</item>
+        <item name="headerTextShadowColor">#ffffffff</item>
+        <item name="headerTextShadowDx">0.0</item>
+        <item name="headerTextShadowDy">-1.0</item>
+        <item name="headerTextShadowRadius">1.0</item>
+        <item name="listBackground">@drawable/bg_list_blackslate</item>
+        <item name="listPaddingLeft">15.0dip</item>
+        <item name="listPaddingTop">0.0dip</item>
+        <item name="listPaddingRight">15.0dip</item>
+        <item name="listPaddingBottom">0.0dip</item>
+        <item name="listDivider">@drawable/bg_divider_blackslate</item>
+        <item name="listDividerHeight">1.0px</item>
+        <item name="listItemLine1TextColor">#ffffffff</item>
+        <item name="listItemLine2TextColor">#ff999999</item>
+        <item name="listItemPaddingLeft">0.0dip</item>
+        <item name="listItemPaddingTop">0.0dip</item>
+        <item name="listItemPaddingRight">0.0dip</item>
+        <item name="listItemPaddingBottom">0.0dip</item>
+        <item name="footerBackground">@drawable/bg_footer_blackslate</item>
+        <item name="footerPaddingLeft">0.0dip</item>
+        <item name="footerPaddingTop">16.0dip</item>
+        <item name="footerPaddingRight">0.0dip</item>
+        <item name="footerPaddingBottom">0.0dip</item>
+        <item name="footerTextColor">#fff0f0f0</item>
+        <item name="footerTextStyle">bold</item>
+        <item name="footerButtonBackground">@drawable/bg_button_blackslate</item>
+        <item name="footerButtonHeight">41.0dip</item>
+        <item name="footerTextSize">18.0sp</item>
+        <item name="footerTextShadowColor">#ff000000</item>
+        <item name="footerTextShadowDx">1.0</item>
+        <item name="footerTextShadowDy">1.0</item>
+        <item name="footerTextShadowRadius">1.0</item>
+    </style>
+    
+    <style name="Animations" />
+
+    <!-- PopDownMenu -->
+    <style name="Animations.PopDownMenu" />
+    
+    <style name="Animations.PopDownMenu.Left">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_topleft_to_bottomright</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottomright_to_topleft</item>
+    </style>
+    
+    <style name="Animations.PopDownMenu.Right">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_topright_to_bottomleft</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottomleft_to_topright</item>
+    </style>
+    
+    <style name="Animations.PopDownMenu.Center">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+    </style>
+    
+    <!-- PopUpMenu -->
+    <style name="Animations.PopUpMenu" />
+    
+    <style name="Animations.PopUpMenu.Left">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottomleft_to_topright</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_topright_to_bottomleft</item>
+    </style>
+    
+    <style name="Animations.PopUpMenu.Right">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottomright_to_topleft</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_topleft_to_bottomright</item>
+    </style>
+    
+    <style name="Animations.PopUpMenu.Center">
+        <item name="@android:windowEnterAnimation">@anim/grow_from_bottom</item>
+        <item name="@android:windowExitAnimation">@anim/shrink_from_top</item>
+    </style>
+</resources>

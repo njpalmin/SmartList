@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/wrapper" android:background="@drawable/bg_main_simple" android:clipChildren="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@+id/hills" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_marginBottom="20.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:src="@drawable/logo"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/go_pro_or_signup_wrapper" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginBottom="5.0dip" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageButton android:id="@+id/pro" android:background="@android:color/transparent" android:padding="0.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:src="@drawable/ic_go_pro" android:contentDescription="@string/out_of_milk_pro"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+        <ImageButton android:id="@+id/signup" android:background="@android:color/transparent" android:padding="0.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:src="@drawable/ic_signup" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:contentDescription="@string/signup"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+        <LinearLayout android:orientation="horizontal" android:id="@+id/signin_link_wrapper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ffcccccc" android:id="@+id/or" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/or"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textStyle="bold" android:textColor="#ffffffff" android:id="@+id/signin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/signin"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@+id/cloud_top_exit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginRight="60.0dip" android:src="@drawable/bg_cloud1" android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <ImageView android:id="@+id/cloud_top_enter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginRight="60.0dip" android:src="@drawable/bg_cloud1" android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <ImageView android:id="@+id/cloud_middle_exit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="50.0dip" android:src="@drawable/bg_cloud2" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <ImageView android:id="@+id/cloud_middle_enter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="50.0dip" android:src="@drawable/bg_cloud2" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <ImageView android:id="@+id/cloud_bottom_exit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dip" android:layout_marginRight="-30.0dip" android:src="@drawable/bg_cloud3" android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <ImageView android:id="@+id/cloud_bottom_enter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100.0dip" android:layout_marginRight="-30.0dip" android:src="@drawable/bg_cloud3" android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <LinearLayout android:orientation="horizontal" android:id="@+id/first_row_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:id="@+id/shopping_list_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageButton android:id="@+id/shopping_list" android:background="@android:color/transparent" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_shopping_list" android:contentDescription="@string/shopping_list"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textStyle="bold" android:textColor="#ff333333" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/shopping_list"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/spice_rack_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageButton android:id="@+id/pantry_list" android:background="@android:color/transparent" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_spice_rack" android:contentDescription="@string/pantry_list"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textStyle="bold" android:textColor="#ff333333" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/pantry_list"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/second_row_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:layout_below="@+id/first_row_wrapper"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:id="@+id/todo_list_wrapper" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageButton android:id="@+id/todo_list" android:background="@android:color/transparent" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/ic_todo_list" android:contentDescription="@string/todo_list"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textStyle="bold" android:textColor="#ff333333" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="@string/todo_list"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+    </LinearLayout>
+</RelativeLayout>

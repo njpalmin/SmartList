@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageButton android:layout_gravity="center_vertical" android:id="@+id/options" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_btn_edit" android:minHeight="48.0dip" android:contentDescription="@string/edit_additional_item_details" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <AutoCompleteTextView android:textColor="#ff000000" android:id="@+id/input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/enter_text" android:scrollHorizontally="true" android:singleLine="true" android:inputType="textCapSentences" android:imeOptions="actionDone" />
+        </LinearLayout>
+        <ImageButton android:layout_gravity="center_vertical" android:id="@+id/voice_input" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_btn_speak_now" android:minHeight="48.0dip" android:contentDescription="@string/input_text_by_voice" />
+        <ImageButton android:layout_gravity="center_vertical" android:id="@+id/save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip" android:src="@drawable/ic_btn_enter" android:minHeight="48.0dip" android:contentDescription="@string/save" />
+    </LinearLayout>
+</merge>

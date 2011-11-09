@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="headerBackground" format="reference|color" />
+    <attr name="headerPaddingLeft" format="dimension" />
+    <attr name="headerPaddingTop" format="dimension" />
+    <attr name="headerPaddingRight" format="dimension" />
+    <attr name="headerPaddingBottom" format="dimension" />
+    <attr name="headerTitleBarPaddingLeft" format="dimension" />
+    <attr name="headerTitleBarPaddingTop" format="dimension" />
+    <attr name="headerTitleBarPaddingRight" format="dimension" />
+    <attr name="headerTitleBarPaddingBottom" format="dimension" />
+    <attr name="headerInputTextBarPaddingLeft" format="dimension" />
+    <attr name="headerInputTextBarPaddingTop" format="dimension" />
+    <attr name="headerInputTextBarPaddingRight" format="dimension" />
+    <attr name="headerInputTextBarPaddingBottom" format="dimension" />
+    <attr name="headerScanButtonBackground" format="reference|color" />
+    <attr name="headerAddButtonBackground" format="reference|color" />
+    <attr name="headerTextBackground" format="reference|color" />
+    <attr name="headerTextColor" format="color" />
+    <attr name="headerTextStyle">
+        <flag name="normal" value="0x00000000" />
+        <flag name="bold" value="0x00000001" />
+        <flag name="italic" value="0x00000002" />
+    </attr>
+    <attr name="headerTextSize" format="dimension" />
+    <attr name="headerTextShadowColor" format="color" />
+    <attr name="headerTextShadowDx" format="float" />
+    <attr name="headerTextShadowDy" format="float" />
+    <attr name="headerTextShadowRadius" format="float" />
+    <attr name="listBackground" format="reference|color" />
+    <attr name="listPaddingLeft" format="dimension" />
+    <attr name="listPaddingTop" format="dimension" />
+    <attr name="listPaddingRight" format="dimension" />
+    <attr name="listPaddingBottom" format="dimension" />
+    <attr name="listDivider" format="reference|color" />
+    <attr name="listDividerHeight" format="dimension" />
+    <attr name="listItemLine1TextColor" format="color" />
+    <attr name="listItemLine2TextColor" format="color" />
+    <attr name="listItemPaddingLeft" format="dimension" />
+    <attr name="listItemPaddingTop" format="dimension" />
+    <attr name="listItemPaddingRight" format="dimension" />
+    <attr name="listItemPaddingBottom" format="dimension" />
+    <attr name="footerBackground" format="reference|color" />
+    <attr name="footerPaddingLeft" format="dimension" />
+    <attr name="footerPaddingTop" format="dimension" />
+    <attr name="footerPaddingRight" format="dimension" />
+    <attr name="footerPaddingBottom" format="dimension" />
+    <attr name="footerTextColor" format="color" />
+    <attr name="footerTextStyle">
+        <flag name="normal" value="0x00000000" />
+        <flag name="bold" value="0x00000001" />
+        <flag name="italic" value="0x00000002" />
+    </attr>
+    <attr name="footerButtonBackground" format="reference|color" />
+    <attr name="footerButtonHeight" format="dimension" />
+    <attr name="footerTextSize" format="dimension" />
+    <attr name="footerTextShadowColor" format="color" />
+    <attr name="footerTextShadowDx" format="float" />
+    <attr name="footerTextShadowDy" format="float" />
+    <attr name="footerTextShadowRadius" format="float" />
+    
+    <declare-styleable name="ViewfinderView"/>
+</resources>

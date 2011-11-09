@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sync_refresh_interval_pref_options">
+        <item>5 minutos</item>
+        <item>10 minutos</item>
+        <item>15 minutos</item>
+        <item>30 minutos</item>
+        <item>1 hora</item>
+        <item>2 horas</item>
+        <item>3 horas</item>
+        <item>4 horas</item>
+    </string-array>
+    <string-array name="list_item_font_size_pref_options">
+        <item>Grande</item>
+        <item>Mediana</item>
+        <item>Pequeño</item>
+    </string-array>
+    <string-array name="shopping_list_tap_action_pref_options">
+        <item>No hacer nada</item>
+        <item>Mostrar el menú</item>
+        <item>Tachar el artículo</item>
+        <item>Editar el artículo</item>
+    </string-array>
+    <string-array name="shopping_list_long_press_action_pref_options">
+        <item>No hacer nada</item>
+        <item>Mostrar el menú</item>
+        <item>Tachar el artículo</item>
+        <item>Editar el artículo</item>
+    </string-array>
+    <string-array name="pantry_list_tap_action_pref_options">
+        <item>No hacer nada</item>
+        <item>Mostrar el menú</item>
+        <item>Editar el artículo</item>
+    </string-array>
+    <string-array name="pantry_list_long_press_action_pref_options">
+        <item>No hacer nada</item>
+        <item>Mostrar el menú</item>
+        <item>Editar el artículo</item>
+    </string-array>
+    <string-array name="todo_list_tap_action_pref_options">
+        <item>No hacer nada</item>
+        <item>Mostrar el menú</item>
+        <item>Tachar el artículo</item>
+        <item>Editar el artículo</item>
+    </string-array>
+    <string-array name="todo_list_long_press_action_pref_options">
+        <item>No hacer nada</item>
+        <item>Mostrar el menú</item>
+        <item>Tachar el artículo</item>
+        <item>Editar el artículo</item>
+    </string-array>
+    <string-array name="product_history_tap_action_pref_options">
+        <item>No hacer nada</item>
+        <item>Mostrar el menú</item>
+        <item>Editar el artículo</item>
+    </string-array>
+    <string-array name="product_history_long_press_action_pref_options">
+        <item>No hacer nada</item>
+        <item>Mostrar el menú</item>
+        <item>Editar el artículo</item>
+    </string-array>
+    <string-array name="manage_lists_tap_action_pref_options">
+        <item>No hacer nada</item>
+        <item>Mostrar el menú</item>
+        <item>Abierto la lista</item>
+        <item>Editar la lista</item>
+    </string-array>
+    <string-array name="manage_lists_long_press_action_pref_options">
+        <item>No hacer nada</item>
+        <item>Mostrar el menú</item>
+        <item>Editar la lista</item>
+    </string-array>
+    <string-array name="preset_grocery_list_items">
+        <item>Aceite - girasol</item>
+        <item>Aceite - oliva</item>
+        <item>Aderezos</item>
+        <item>Agua</item>
+        <item>Aguacates</item>
+        <item>Ajo</item>
+        <item>Albaricoques</item>
+        <item>Alcohol limpieza</item>
+        <item>Almidón</item>
+        <item>Amoniaco</item>
+        <item>Antiácido</item>
+        <item>Apio</item>
+        <item>Arroz</item>
+        <item>Aspirina</item>
+        <item>Atún</item>
+        <item>Avena</item>
+        <item>Azúcar - blanca</item>
+        <item>Azúcar - morena</item>
+        <item>Azúcar - polvo</item>
+        <item>Bacon</item>
+        <item>Bananas</item>
+        <item>Batatas</item>
+        <item>Bebé - Pañales</item>
+        <item>Bebé Potitos Fórmula</item>
+        <item>Bebé Potitos</item>
+        <item>Bebé Toallitas</item>
+        <item>Bicarbonato</item>
+        <item>Bolsas basura</item>
+        <item>Bolsas congelador</item>
+        <item>Bolsas plástico</item>
+        <item>Bolsas tela</item>
+        <item>Bolsas vacío</item>
+        <item>Bombillas - 60w</item>
+        <item>Bombillas - 75w</item>
+        <item>Bombillas - 100w</item>
+        <item>Bombillas - bajo consumo</item>
+        <item>Broccoli</item>
+        <item>Cacahuetes Fritos</item>
+        <item>Cacao</item>
+        <item>Café</item>
+        <item>Calabaza</item>
+        <item>Camarones</item>
+        <item>Canela</item>
+        <item>Carbón</item>
+        <item>Carne asada</item>
+        <item>Cebollas</item>
+        <item>Cerdo chuletas</item>
+        <item>Cerdo</item>
+        <item>Cereales</item>
+        <item>Cerezas</item>
+        <item>Cerveza</item>
+        <item>Champú</item>
+        <item>Chile</item>
+        <item>Chocolate Espeso</item>
+        <item>Chocolate virutas</item>
+        <item>Chucrut</item>
+        <item>Ciruelas</item>
+        <item>Coco</item>
+        <item>Col</item>
+        <item>Coliflor</item>
+        <item>Condimento</item>
+        <item>Crema - afeitar</item>
+        <item>Crema - batido</item>
+        <item>Crema</item>
+        <item>Cuchillas afeitar</item>
+        <item>Depurador</item>
+        <item>Desodorante</item>
+        <item>Detergente - lavadora</item>
+        <item>Detergente - lavavajillas</item>
+        <item>Detergente Fórmula</item>
+        <item>Dulces</item>
+        <item>Embutido</item>
+        <item>Encerado</item>
+        <item>Enjuague bucal</item>
+        <item>Espárragos</item>
+        <item>Esponja</item>
+        <item>Fideos</item>
+        <item>Filetes</item>
+        <item>Film plástico</item>
+        <item>Film</item>
+        <item>Fresas</item>
+        <item>Frijol Pinto</item>
+        <item>Frijoles azucarados</item>
+        <item>Frijoles picadillo</item>
+        <item>Frijoles refritos</item>
+        <item>Frijoles salados</item>
+        <item>Frijoles</item>
+        <item>Galletas - dulces</item>
+        <item>Galletas - Graham</item>
+        <item>Galletas - Pretzels</item>
+        <item>Galletas - ritz</item>
+        <item>Galletas - saladas</item>
+        <item>Galletas</item>
+        <item>Gaseosa</item>
+        <item>Gatos arena</item>
+        <item>Gatos comida</item>
+        <item>Gelatina</item>
+        <item>Grasa</item>
+        <item>Guisantes</item>
+        <item>Hamburgesas</item>
+        <item>Harina Maiz</item>
+        <item>Harina</item>
+        <item>Helado</item>
+        <item>Higiene femenina</item>
+        <item>Hilo dental</item>
+        <item>Huevos</item>
+        <item>Ibuprofeno</item>
+        <item>Jabón - baño</item>
+        <item>Jabón - manos</item>
+        <item>Jabón - pastilla</item>
+        <item>Jabón - platos</item>
+        <item>Jalapeños</item>
+        <item>Jalea</item>
+        <item>Jamón</item>
+        <item>Jarabe</item>
+        <item>Judías verdes</item>
+        <item>Ketchup</item>
+        <item>Lasagna</item>
+        <item>Leche</item>
+        <item>Lechuga</item>
+        <item>Legía</item>
+        <item>Levadura en Polvo</item>
+        <item>Levadura Tacos</item>
+        <item>Limas</item>
+        <item>Limones</item>
+        <item>Limpia Cristales</item>
+        <item>Limpia Hornos</item>
+        <item>Limpia inodoros</item>
+        <item>Macarrones</item>
+        <item>Magro</item>
+        <item>Maiz Mazorcas</item>
+        <item>Maiz Palomitas</item>
+        <item>Maiz</item>
+        <item>Mantequilla de cacahuetes</item>
+        <item>Mantequilla</item>
+        <item>Manzanas</item>
+        <item>Margarina</item>
+        <item>Mayonesa</item>
+        <item>Melaza</item>
+        <item>Melocotones</item>
+        <item>Melón</item>
+        <item>Menta</item>
+        <item>Mermelada</item>
+        <item>Mezcladito Galletas</item>
+        <item>Mezcladito Pancake</item>
+        <item>Mezcladito Torta</item>
+        <item>Miel</item>
+        <item>Mostaza</item>
+        <item>Muffin Inglés</item>
+        <item>Naranjas</item>
+        <item>Nata</item>
+        <item>Nectar</item>
+        <item>Nectarinas</item>
+        <item>Olivas</item>
+        <item>Pan - blanco</item>
+        <item>Pan - francés</item>
+        <item>Pan - Hamburgesas</item>
+        <item>Pan - salchichas</item>
+        <item>Pan - Sandwich</item>
+        <item>Pan - trigo</item>
+        <item>Pañuelos</item>
+        <item>Papel higiénico</item>
+        <item>Pasas</item>
+        <item>Pasta dientes</item>
+        <item>Patatas - tortilla</item>
+        <item>Patatas a la francesa</item>
+        <item>Patatas fritas</item>
+        <item>Patatas papas</item>
+        <item>Patatas</item>
+        <item>Pepinillo</item>
+        <item>Pepino</item>
+        <item>Peras</item>
+        <item>Perros comida</item>
+        <item>Pescado Barritas</item>
+        <item>Pescado</item>
+        <item>Picadillo</item>
+        <item>Pilas - AA</item>
+        <item>Pilas - AAA</item>
+        <item>Pilas - C</item>
+        <item>Pilas - D</item>
+        <item>Pimienta</item>
+        <item>Pimientos rojos</item>
+        <item>Pimientos verdes</item>
+        <item>Piña</item>
+        <item>Pizza</item>
+        <item>Pollo - entero</item>
+        <item>Pollo - pechuga</item>
+        <item>Pollo - piezas</item>
+        <item>Pomelo</item>
+        <item>Pudding</item>
+        <item>Queso - americano</item>
+        <item>Queso - azul</item>
+        <item>Queso - cheddar</item>
+        <item>Queso - cremoso</item>
+        <item>Queso - fresco</item>
+        <item>Queso - mont Jack</item>
+        <item>Queso - mozzarella</item>
+        <item>Queso - parmesano</item>
+        <item>Queso - polvo</item>
+        <item>Queso - ricotta</item>
+        <item>Rábano</item>
+        <item>Ravioli</item>
+        <item>Recetas</item>
+        <item>Requesón</item>
+        <item>Rollos</item>
+        <item>Rosquilletas</item>
+        <item>Sal</item>
+        <item>Salchichas - cocidas</item>
+        <item>Salchichas - frescas</item>
+        <item>Salchichas</item>
+        <item>Salmón</item>
+        <item>Salsa Barbacoa</item>
+        <item>Salsa soja</item>
+        <item>Salsa solomillo</item>
+        <item>Salsa Spaghetti</item>
+        <item>Salsa Tomate</item>
+        <item>Sandía</item>
+        <item>Servilletas</item>
+        <item>Setas</item>
+        <item>Sirope</item>
+        <item>Solomillo</item>
+        <item>Sopa Fideos</item>
+        <item>Sopa</item>
+        <item>Spaghetti - fresco</item>
+        <item>Spaghetti</item>
+        <item>Suavizante</item>
+        <item>Tacos</item>
+        <item>Tarjetas felicitación</item>
+        <item>Tea</item>
+        <item>Toallas papel</item>
+        <item>Tomate Frito</item>
+        <item>Tomate natural</item>
+        <item>Tornillería</item>
+        <item>Tortillas - huevos</item>
+        <item>Tortillas - maiz</item>
+        <item>Tums</item>
+        <item>Turkey</item>
+        <item>Uvas</item>
+        <item>Vainilla extracto</item>
+        <item>Vieiras</item>
+        <item>Vino</item>
+        <item>Vitaminas</item>
+        <item>Waffles</item>
+        <item>Worcestershire</item>
+        <item>Yams</item>
+        <item>Yogurt</item>
+        <item>Zanahorias</item>
+        <item>Zucchini</item>
+        <item>Zumo concentrado</item>
+        <item>Zumo Limón</item>
+        <item>Zumo Manzana</item>
+        <item>Zumo Naranja - frío</item>
+        <item>Zumo Naranja</item>
+    </string-array>
+    <string-array name="preset_spice_list_items">
+        <item>Ajo sal</item>
+        <item>Ajo</item>
+        <item>Albahaca (Fresca)</item>
+        <item>Alcaravea</item>
+        <item>Amapola semillas</item>
+        <item>Anís semillas</item>
+        <item>Anís</item>
+        <item>Azafrán</item>
+        <item>Azúcar (Grano)</item>
+        <item>Azúcar (Morena)</item>
+        <item>Azúcar (Polvo)</item>
+        <item>Basilio (Picado)</item>
+        <item>Canela (Extracto)</item>
+        <item>Canela (Palitos)</item>
+        <item>Canela (Picada)</item>
+        <item>Cardamo (entero)</item>
+        <item>Cardomo (Polvo)</item>
+        <item>Cebolla sal</item>
+        <item>Cebollino</item>
+        <item>Chile (Polvo)</item>
+        <item>Chile rojo</item>
+        <item>Cilantro (Fresco)</item>
+        <item>Cilantro (Picado)</item>
+        <item>Cilantro (Polvo)</item>
+        <item>Cilantro semillas</item>
+        <item>Clavo</item>
+        <item>Comino (Picado)</item>
+        <item>Comino semillas</item>
+        <item>Crema de tártaro</item>
+        <item>Cubito caldo carne</item>
+        <item>Cubito caldo pollo</item>
+        <item>Cúrcuma (Polvo)</item>
+        <item>Curry (Polvo)</item>
+        <item>Curry hojas</item>
+        <item>Damiana hojas</item>
+        <item>Estragón</item>
+        <item>Garam Masala</item>
+        <item>Hinojo semillas</item>
+        <item>Jenjibre (Fresco)</item>
+        <item>Jenjibre (Picado)</item>
+        <item>Laurel hojas</item>
+        <item>Limón sal</item>
+        <item>Limón seco</item>
+        <item>Limón Thai (Polvo)</item>
+        <item>Mejorana</item>
+        <item>Menta (Picada)</item>
+        <item>Menta</item>
+        <item>Methi (Alholva)</item>
+        <item>Mostaza semillas</item>
+        <item>Nuez moscada (Picada)</item>
+        <item>Orégano (Seco)</item>
+        <item>Orégano</item>
+        <item>Paprika (Ahumado)</item>
+        <item>Paprika (Caliente)</item>
+        <item>Paprika (Dulce)</item>
+        <item>Paprika</item>
+        <item>Perejil</item>
+        <item>Perifollos</item>
+        <item>Pimienta Cayenne</item>
+        <item>Pimienta Jamaica</item>
+        <item>Pimienta Limón</item>
+        <item>Pimienta Negra</item>
+        <item>Pimienta Roja</item>
+        <item>Pimiento rojo picado</item>
+        <item>Ras El Hanout</item>
+        <item>Romero</item>
+        <item>Sabio</item>
+        <item>Sal, Kosher</item>
+        <item>Sal, Mar</item>
+        <item>Sal, Roca</item>
+        <item>Sal</item>
+        <item>Savory</item>
+        <item>Sazonador Italiano</item>
+        <item>Semillas</item>
+        <item>Sésamo semillas</item>
+        <item>Shichimi</item>
+        <item>Sriracha</item>
+        <item>Tamarindo</item>
+        <item>Tomillo</item>
+        <item>Vainilla</item>
+        <item>Zumaque</item>
+    </string-array>
+    <string-array name="preset_essentials_items">
+        <item>Aceite Oliva</item>
+        <item>Anacardos</item>
+        <item>Azúcar Moreno</item>
+        <item>AzúcarSugars</item>
+        <item>Bicarbonato</item>
+        <item>Cacahuetes</item>
+        <item>Café</item>
+        <item>Caldo de ternera</item>
+        <item>Caldo Pollo</item>
+        <item>Caldo de vaca</item>
+        <item>Caldo Vegetales</item>
+        <item>Carne seca</item>
+        <item>Cereales</item>
+        <item>Conserva atún</item>
+        <item>Conserva de frutas</item>
+        <item>Conserva Leche condensada</item>
+        <item>Conserva Pan negro</item>
+        <item>Conserva Pollo</item>
+        <item>Conserva vegetales</item>
+        <item>Cubitos Bouillon</item>
+        <item>Cuscús</item>
+        <item>Frijoles en lata</item>
+        <item>Frutos secosDried fruits</item>
+        <item>Galletas Graham</item>
+        <item>Galletas</item>
+        <item>Harina</item>
+        <item>Jarabe</item>
+        <item>Leche Polvo</item>
+        <item>Mantequilla de maní</item>
+        <item>Mezcladito salados</item>
+        <item>Miel</item>
+        <item>Pasas</item>
+        <item>Pasta</item>
+        <item>Salsa</item>
+        <item>Sésamo semillas</item>
+        <item>Setas secas</item>
+        <item>Tea</item>
+        <item>Vinagre</item>
+        <item>Zumo manzana</item>
+    </string-array>
+</resources>
