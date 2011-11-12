@@ -20,7 +20,7 @@ public class HeaderView extends LinearLayout
   private Button titleBtn = null;
   private ImageButton scanBtn = null;
   private ImageButton addBtn = null;
-
+  
   public HeaderView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);

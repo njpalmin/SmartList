@@ -1,6 +1,7 @@
 package com.njpalmin.smartlist.activity;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.parsers.SAXParser;
@@ -23,18 +24,21 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.zxing.client.android.CaptureActivity;
 import com.njpalmin.smartlist.R;
+import com.njpalmin.smartlist.record.ActiveRecord;
 import com.njpalmin.smartlist.record.ActiveRecord.Lists;
 import com.njpalmin.smartlist.record.ActiveRecord.Product;
 import com.njpalmin.smartlist.ui.ActionItem;
@@ -48,6 +52,8 @@ import com.njpalmin.smartlist.utils.Utils;
 
 public class ShoppingListActivity extends ListActivity{
 	final private static String TAG="ShoppingListActivity";
+	private static final int VOICE_RECOGNITION_REQUEST_CODE = 1234;
+	
 	private HeaderView headerView;
 	private FooterView footerView;
 	private SortableListView mShoppingListView;
@@ -58,6 +64,10 @@ public class ShoppingListActivity extends ListActivity{
 	private Cursor mCursor;
 	private Uri mUri;
 	private int mDone;
+	private TextView totalText;
+	private TextView remText;
+	private EditText desText;
+
 	
 	private static final String[] LISTS_PROJECTION = new String[] {
 		Lists._ID,
@@ -94,6 +104,7 @@ public class ShoppingListActivity extends ListActivity{
 		Product.CREATED,   
 		Product.MODIFIED,
 	};	
+	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,6 +118,42 @@ public class ShoppingListActivity extends ListActivity{
         }
         initView();
     }
+	
+	@Override
+	public void onResume() {
+		super.onResume();
+		updateFooterView();
+	}
+	
+	private void updateFooterView() {
+		StringBuffer totalStr = new StringBuffer();
+		StringBuffer remStr = new StringBuffer();
+		double totalValue = 0.0;
+		double remValue = 0.0;
+		
+		Cursor cursor = mContentResolver.query(Product.CONTENT_URI,PRODUCT_PROJECTION, null, null, null);
+		if (cursor != null) {
+			int count = cursor.getCount();
+			if (count > 0) {
+				double singleValue = 0.0;
+				for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()){
+					singleValue = cursor.getDouble(cursor.getColumnIndex(ActiveRecord.Product.PRICE))
+									* cursor.getInt(cursor.getColumnIndex(ActiveRecord.Product.QUANTITY));
+					if (0 == cursor.getInt(cursor.getColumnIndex(ActiveRecord.Product.DONE))) {
+						remValue += singleValue;
+					}
+					totalValue += singleValue;
+				}
+			}
+			cursor.close();
+			cursor = null;
+		}
+		
+		remText.setText(remStr.append(getResources().getString(R.string.remaining))
+							.append(": ").append(remValue));
+		totalText.setText(totalStr.append(getResources().getString(R.string.total))
+							.append(": ").append(totalValue));
+	}
 	
 	private void initView() {	
 		headerView = (HeaderView)findViewById(R.id.header);
@@ -140,28 +187,39 @@ public class ShoppingListActivity extends ListActivity{
 				startActivityForResult(intent, 0);
 			}
 		});
-        headerView.getInputView().getOptionBtn().setOnClickListener(new View.OnClickListener() {
-			
+        
+        headerView.getInputView().getVoiceBtn().setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent = new Intent(ShoppingListActivity.this, ProductDetailsActivity.class);
-				startActivityForResult(intent, 0);
+				startVoiceRecognitionActivity();
 			}
 		});
         
         
+        desText = headerView.getInputView().getTextView();
+        headerView.getInputView().getOptionBtn().setOnClickListener(new View.OnClickListener() {
+
+        @Override
+        public void onClick(View v) {
+        	// TODO Auto-generated method stub
+		        Intent intent = new Intent(ShoppingListActivity.this, ProductDetailsActivity.class);
+		        intent.putExtra("description", desText.getText().toString());
+		        startActivity(intent);
+	        }
+        });
+
+        
         footerView = (FooterView)findViewById(R.id.footer);
         footerView.setBackgroundResource(R.drawable.bg_footer);
-        TextView text1 = footerView.getTextOne();
-        text1.setText( getResources().getString(R.string.remaining) +" $0.00");
-        text1.setTextColor(Color.WHITE);
-        text1.setTextSize(18);
-        text1.setTypeface(null, Typeface.BOLD);
-        TextView text2 = footerView.getTextTwo();
-        text2.setTextColor(Color.WHITE);
-        text2.setTextSize(18);
-        text2.setTypeface(null, Typeface.BOLD);
+        totalText = footerView.getTextOne();
+        totalText.setTextColor(Color.WHITE);
+        totalText.setTextSize(18);
+        totalText.setTypeface(null, Typeface.BOLD);
+        remText = footerView.getTextTwo();
+        remText.setTextColor(Color.WHITE);
+        remText.setTextSize(18);
+        remText.setTypeface(null, Typeface.BOLD);
         footerView.useTextView();
 
         mShoppingListView = (SortableListView)getListView();
@@ -209,19 +267,15 @@ public class ShoppingListActivity extends ListActivity{
 						values.put(Product.DONE,"1");
 						mDone = 1;
 					}
-					mContentResolver.update(Product.CONTENT_URI,values,null,null);	
+					mContentResolver.update(mUri,values,null,null);	
+					updateFooterView();
 				} else if (pos == 1) { //Delete item selected
 					mContentResolver.delete(mUri,null,null);
+					updateFooterView();
 				} else if (pos == 2) { //Edit item selected
 					//Toast.makeText(ShoppingListActivity.this, mUri.toString(), Toast.LENGTH_SHORT).show();
 					Log.d(TAG,"mUri: Pos "+mUri);
 					startActivity(new Intent(Utils.INTENT_ACTION_EDIT, mUri));
-					//startActivity(new Intent(Utils.INTENT_ACTION_EDIT));
-					/*
-					int productId = mCursor.getInt(mCursor.getColumnIndex(Product._ID));
-					Intent intent = new Intent(ShoppingListActivity.this, ProductDetailsActivity.class);
-					intent.setAction("EditProduct");
-					intent.putExtra("ProductId",productId);*/
 				}	
 			}
 		});
@@ -255,6 +309,19 @@ public class ShoppingListActivity extends ListActivity{
 		if (resultCode != 0) {
 			return;
 		}
+
+        if (requestCode == VOICE_RECOGNITION_REQUEST_CODE && resultCode == RESULT_OK) {
+            // Fill the list view with the strings the recognizer thought it could have heard
+            ArrayList<String> matches = data.getStringArrayListExtra(
+                    RecognizerIntent.EXTRA_RESULTS);
+            
+			Intent intent = new Intent(ShoppingListActivity.this, ProductDetailsActivity.class);
+			//intent.putExtra("description", builder.toString());
+			intent.putExtra("description", matches);
+			//startActivityForResult(intent, 1);
+			startActivity(intent);
+        }
+		
 		
 		HttpResponse rp = null;
 		String result = null;
@@ -314,4 +381,12 @@ public class ShoppingListActivity extends ListActivity{
 	private Uri getUri(){
 		return mUri;
 	}
+	
+    private void startVoiceRecognitionActivity() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speech recognition demo");
+        startActivityForResult(intent, VOICE_RECOGNITION_REQUEST_CODE);
+    }
 }

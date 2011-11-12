@@ -30,6 +30,8 @@ public class ProductDetailsActivity extends Activity {
 	private ContentResolver mContentResolver;
 	private Button mSaveButton;
 	private Button mCancelButton;
+	private EditText quantityText;
+	private int quantity;
 	private Cursor mCursor;
 	private boolean mEdit;
 
@@ -114,7 +116,7 @@ public class ProductDetailsActivity extends Activity {
 					((CheckBox)findViewById(R.id.tax_free)).setChecked((mCursor.getInt(mCursor.getColumnIndex(Product.TAX_FREE))) == 1 ? true:false);
 					((CheckBox)findViewById(R.id.has_coupon)).setChecked((mCursor.getInt(mCursor.getColumnIndex(Product.HAS_COUPON))) == 1 ? true:false);
 				}
-			}*/
+		-	}*/
 		}
 	}
 	
@@ -143,6 +145,28 @@ public class ProductDetailsActivity extends Activity {
 			((CheckBox)findViewById(R.id.tax_free)).setChecked((mCursor.getInt(mCursor.getColumnIndex(Product.TAX_FREE))) == 1 ? true:false);
 			((CheckBox)findViewById(R.id.has_coupon)).setChecked((mCursor.getInt(mCursor.getColumnIndex(Product.HAS_COUPON))) == 1 ? true:false);
 		}
+		
+		quantityText = (EditText)findViewById(R.id.number_text);
+		((Button)findViewById(R.id.number_add)).setOnClickListener(new View.OnClickListener(){
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			quantity++;
+			quantityText.setText("" + quantity);
+			}
+		});
+
+		((Button)findViewById(R.id.number_dec)).setOnClickListener(new View.OnClickListener(){
+			@Override
+			public void onClick(View v) {
+			// TODO Auto-generated method stub
+				if (quantity > 0) {
+					quantity--;
+					quantityText.setText("" + quantity);
+					}
+				}
+			});
+
 	}
 	
 	private OnClickListener saveButtonOnClickListener = new OnClickListener(){

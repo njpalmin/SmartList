@@ -9,6 +9,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
@@ -56,6 +57,15 @@ public class InputTextView extends LinearLayout
 	public ImageButton getOptionBtn() {
 		return optionBtn;
 	}
+	
+	public ImageButton getVoiceBtn(){
+		return voiceBtn;
+	}
+
+	public EditText getTextView() {
+		return textView;
+	}
+
 	
 	private void refreshLastBtn() {
 		String str = textView.getText().toString();
