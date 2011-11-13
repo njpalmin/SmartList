@@ -60,7 +60,7 @@
     <string name="add_to_shopping_list">Añadir a la Lista Compra</string>
     <string name="delete_shopping_list_items_confirmation">Desea eliminar todos los artículos de su Lista de Compra?</string>
     <string name="quantity_abbr">Cant</string>
-    <string name="shopping_list">Lista Compra</string>
+    <string name="shopping_list">Lista de Compras</string>
     <string name="total">Total</string>
     <string name="total_with_taxes">%s sin IVA</string>
     <string name="remaining">Resto</string>
@@ -420,4 +420,5 @@
     <string name="wifi_ssid_label">Nombre de red</string>
     <string name="wifi_type_label">Tipo</string>
     <string name="zxing_url">http://code.google.com/p/zxing</string>
+    <string name="app_name">Lucía Bistró</string>
 </resources>

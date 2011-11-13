@@ -161,7 +161,7 @@ public class ShoppingListActivity extends ListActivity{
 		headerView.setPadding(6, 12, 6, 12);
 		
 		LinearLayout titleLayout = headerView.getTitleLayout();
-        headerView.getTitleBtn().setText("Shopping list >");
+        headerView.getTitleBtn().setText(R.string.shopping_list);
         Button button = headerView.getTitleBtn();
         button.setTextColor(Color.WHITE);
         button.setTextSize(20);
