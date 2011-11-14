@@ -325,6 +325,7 @@ public class ShoppingListActivity extends ListActivity{
 		
 		HttpResponse rp = null;
 		String result = null;
+		String price = null;
 		
 		if (data == null){
 			return ;
@@ -354,6 +355,7 @@ public class ShoppingListActivity extends ListActivity{
 				// xr.parse(new InputSource(getAssets().open("inbox.xml")));
 				syncReader.parse(new InputSource(rp.getEntity().getContent()));
 				result = syncHandler.getProductName();
+				price = syncHandler.getProductPrice();
 				/* Parsing has finished. */
 			}
 	
@@ -361,6 +363,7 @@ public class ShoppingListActivity extends ListActivity{
 				Intent intent = new Intent(ShoppingListActivity.this, ProductDetailsActivity.class);
 				//intent.putExtra("description", builder.toString());
 				intent.putExtra("description", result);
+				intent.putExtra("price", price);
 				//startActivityForResult(intent, 1);
 				startActivity(intent);
 			}

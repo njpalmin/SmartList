@@ -6,10 +6,16 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class SyncDataHandler extends DefaultHandler {
 	boolean mInName = false;
+	boolean mInPrice = false;
 	String mProductName;
+	String mProductPrice;
 	
 	public String getProductName(){
 		return mProductName;
+	}
+	
+	public String getProductPrice(){
+		return mProductPrice;
 	}
 	
 	@Override
@@ -23,6 +29,8 @@ public class SyncDataHandler extends DefaultHandler {
 		super.startElement(uri, localName, qName, attributes);
 		if(localName.equals("name")){
 			mInName = true;
+		}else if(localName.equals("price")){
+			mInPrice = true;
 		}
 	}
 	
@@ -33,6 +41,8 @@ public class SyncDataHandler extends DefaultHandler {
 		super.characters(ch, start, length);
 		if(mInName){
 			mProductName  = String.valueOf(ch, start, length);
+		}else if(mInPrice){
+			mProductPrice  = String.valueOf(ch, start, length);
 		}
 	}
 	
@@ -42,6 +52,8 @@ public class SyncDataHandler extends DefaultHandler {
 		super.endElement(uri, localName, qName);
 		if(localName.equals("name")){
 			mInName = false;
+		}else if(localName.equals("price")){
+			mInPrice = false;
 		}
 	}
 	

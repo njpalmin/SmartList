@@ -24,10 +24,9 @@ import com.njpalmin.smartlist.utils.Utils;
 
 public class ProductDetailsActivity extends Activity {
 	final private static String TAG="ProductDetailsActivity";
-    private static final int STATE_EDIT = 0;
-    private static final int STATE_INSERT = 1;
+    private static final int STATE_EDIT = 1;
+    private static final int STATE_INSERT = 2;
 
-	private ContentResolver mContentResolver;
 	private Button mSaveButton;
 	private Button mCancelButton;
 	private EditText quantityText;
@@ -35,7 +34,7 @@ public class ProductDetailsActivity extends Activity {
 	private Cursor mCursor;
 	private boolean mEdit;
 
-    private int mState;
+    private int mState=0;
     private Uri mUri;
 	
 	private static final String[] PRODUCT_PROJECTION = new String[] {
@@ -74,7 +73,10 @@ public class ProductDetailsActivity extends Activity {
             mState = STATE_EDIT;
             mUri = intent.getData();
             Log.d(TAG,"mUri:"+mUri);
-        } 
+            mCursor = getContentResolver().query(mUri, PRODUCT_PROJECTION, null, null, null);
+        }else{
+        	mState = STATE_INSERT;
+        }
 
         setContentView(R.layout.product_details_activity);
         
@@ -82,22 +84,23 @@ public class ProductDetailsActivity extends Activity {
         WindowManager.LayoutParams layoutParams = window.getAttributes();
         layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
         getWindow().setAttributes(layoutParams);
-        
-        mContentResolver = getContentResolver();
 
-        if(mUri != null){
-        	mCursor = mContentResolver.query(mUri, PRODUCT_PROJECTION, null, null, null);
-        }
-
-        initView();
-        
-        handleIntentData(getIntent());
-    }
+		if(mState == STATE_EDIT ){
+			initEditView();
+		}else{
+			initView();
+			handleIntentData(getIntent());
+		}
+	}
 	
 	private void handleIntentData(Intent intent) {
 		if (intent != null) {
 			String description = intent.getStringExtra("description");
+			String price = intent.getStringExtra("price");
 			((EditText)findViewById(R.id.description)).setText(description);
+			if(price != null){
+				((EditText)findViewById(R.id.price)).setText(price);
+			}
 		}
 	}
 	
@@ -113,20 +116,6 @@ public class ProductDetailsActivity extends Activity {
 				finish();
 			}
 		});
-		
-		if(mCursor != null ){
-			mCursor.moveToFirst();
-			Log.d(TAG,"Description = "+ mCursor.getString(mCursor.getColumnIndex(Product.DESCRIPTION)));
-			
-			
-			((EditText)findViewById(R.id.description)).setText(mCursor.getString(mCursor.getColumnIndex(Product.DESCRIPTION)));
-			((EditText)findViewById(R.id.price)).setText(mCursor.getString(mCursor.getColumnIndex(Product.PRICE)));
-			((EditText)findViewById(R.id.coupon_amount)).setText(mCursor.getString(mCursor.getColumnIndex(Product.COUPON_AMOUNT)));
-			((EditText)findViewById(R.id.coupon_note)).setText(mCursor.getString(mCursor.getColumnIndex(Product.COUPON_NOTE)));
-			((EditText)findViewById(R.id.note)).setText(mCursor.getString(mCursor.getColumnIndex(Product.NOTE)));
-			((CheckBox)findViewById(R.id.tax_free)).setChecked((mCursor.getInt(mCursor.getColumnIndex(Product.TAX_FREE))) == 1 ? true:false);
-			((CheckBox)findViewById(R.id.has_coupon)).setChecked((mCursor.getInt(mCursor.getColumnIndex(Product.HAS_COUPON))) == 1 ? true:false);
-		}
 		
 		quantityText = (EditText)findViewById(R.id.number_text);
 		
@@ -151,6 +140,21 @@ public class ProductDetailsActivity extends Activity {
 			});
 
 	}
+	
+	private void initEditView(){
+		if(mCursor != null){
+			mCursor.moveToFirst();
+			((EditText)findViewById(R.id.description)).setText(mCursor.getString(mCursor.getColumnIndex(Product.DESCRIPTION)));
+			((EditText)findViewById(R.id.price)).setText(mCursor.getString(mCursor.getColumnIndex(Product.PRICE)));
+			((EditText)findViewById(R.id.number_text)).setText(mCursor.getString(mCursor.getColumnIndex(Product.QUANTITY)));
+			((EditText)findViewById(R.id.coupon_amount)).setText(mCursor.getString(mCursor.getColumnIndex(Product.COUPON_AMOUNT)));
+			((EditText)findViewById(R.id.coupon_note)).setText(mCursor.getString(mCursor.getColumnIndex(Product.COUPON_NOTE)));
+			((EditText)findViewById(R.id.note)).setText(mCursor.getString(mCursor.getColumnIndex(Product.NOTE)));
+			((CheckBox)findViewById(R.id.tax_free)).setChecked((mCursor.getInt(mCursor.getColumnIndex(Product.TAX_FREE))) == 1 ? true:false);
+			((CheckBox)findViewById(R.id.has_coupon)).setChecked((mCursor.getInt(mCursor.getColumnIndex(Product.HAS_COUPON))) == 1 ? true:false);
+		}
+	}
+	
 	
 	private OnClickListener saveButtonOnClickListener = new OnClickListener(){
 
@@ -185,7 +189,7 @@ public class ProductDetailsActivity extends Activity {
 			values.put(Product.CREATED, time.format("YYMMDD:HH:MM:SS"));
 			values.put(Product.MODIFIED, time.format("YYMMDD:HH:MM:SS"));
 			
-			mContentResolver.insert(Product.CONTENT_URI,values);
+			getContentResolver().insert(Product.CONTENT_URI,values);
 			finish();
 		}
 		
